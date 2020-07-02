@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: Lookup variable in Conjur
+      debug:
+        msg: "{{ lookup('cyberark.conjur.conjur_variable', 'Pegasus-Vault/pegasus/Test-Safe/Operating System-WinServerLocal-10.10.1.59-Administrator/password') }}"
