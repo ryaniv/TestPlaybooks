@@ -3,8 +3,8 @@
   gather_facts: no
   connection: local
   tasks:
-    # - pause:
-    #     minutes: 4
+    - pause:
+        minutes: 4
 
     - name: Lookup variable in Conjur
       debug:
